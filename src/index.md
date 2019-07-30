@@ -10,7 +10,8 @@ import App from "./components/App";
 import Grid from "./components/Grid";
 import Profile from "./components/Profile";
 import Photo from "./components/Photo";
-import GridControlBar, { GridControlItem } from "./components/GridControlBar";
+import GridControlBar  from "./components/Grid/GridControlBar";
+import GridControlBarItem  from "./components/Grid/GridControlBarItem";
 
 import examplePhotos from "./utils/examplePhotos";
 
@@ -19,8 +20,8 @@ import examplePhotos from "./utils/examplePhotos";
   </Profile>
   <Grid>
     <GridControlBar>
-      <GridControlItem>𐄹 Posts</GridControlItem>
-      <GridControlItem>웃 Tagged</GridControlItem>
+      <GridControlBarItem>𐄹 Posts</GridControlBarItem>
+      <GridControlBarItem>웃 Tagged</GridControlBarItem>
     </GridControlBar>
     {examplePhotos.map(photo => (
       <Photo src={photo.src} key={photo.id} />
