@@ -11,7 +11,8 @@
     "umd"
   ],
   "scripts": {
-    "start": "npx styleguidist server",
+    "start": "styleguidist server",
+    "docs:build": "styleguidist build",
     "release": "npm run build:dev && npm run build:prod",
     "build:dev": "NODE_ENV=development rollup -c",
     "build:prod": "NODE_ENV=production rollup -c",
