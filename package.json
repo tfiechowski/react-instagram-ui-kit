@@ -1,7 +1,7 @@
 {
   "name": "react-instagram-ui-kit",
-  "version": "1.0.0",
-  "description": "react-instagram-ui-kit React component",
+  "version": "0.0.1",
+  "description": "Basic Instagram components in React",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -19,7 +19,9 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
-  "dependencies": {},
+  "dependencies": {
+    "styled-components": "^4.3.2"
+  },
   "peerDependencies": {
     "react": "16.x"
   },
@@ -28,11 +30,16 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
-  "author": "",
-  "homepage": "",
+  "author": "Tomasz Fiechowski <tomasz.fiechowski@gmail.com>",
+  "homepage": "https://github.com/tfiechowski/react-instagram-ui-kit",
   "license": "MIT",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tfiechowski/react-instagram-ui-kit.git"
+  },
   "keywords": [
-    "react-component"
+    "react-component",
+    "instagram",
+    "components"
   ]
 }
