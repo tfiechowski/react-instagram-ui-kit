@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
-import { Wrapper as PhotoWrapper } from "./Photo";
+import { Wrapper as PhotoWrapper } from "../Photo";
 
 const Wrapper = styled.div`
   margin: 0;
@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   width: 100%;
 
   overflow-y: scroll;
+  
   max-height: 100vh;
 
   ${PhotoWrapper} {
