@@ -1,16 +1,13 @@
-import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
-import { Wrapper as PhotoWrapper } from "../Photo";
-
-import examplePhotos from "../../utils/examplePhotos";
+import React from "react";
 
 const Wrapper = styled.div`
   margin: 0;
   padding: 0;
 
   overflow: hidden;
-  margin-bottom: 28px;
+  margin-bottom: 48px;
 
   display: flex;
 `;
