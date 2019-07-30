@@ -21,13 +21,16 @@
   },
   "peerDependencies": {
     "react": "16.x",
-    "styled-components": ">= 4"
+    "@emotion/core": "10.x",
+    "@emotion/styled": "10.x"
   },
   "devDependencies": {
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "babel-plugin-emotion": "^10.0.14",
     "nwb": "0.23.x",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^4.3.2"
+    "react-dom": "^16.8.6"
   },
   "author": "Tomasz Fiechowski <tomasz.fiechowski@gmail.com>",
   "homepage": "https://github.com/tfiechowski/react-instagram-ui-kit",
