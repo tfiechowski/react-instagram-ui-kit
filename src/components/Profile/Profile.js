@@ -1,10 +1,13 @@
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
 import React from "react";
+import { fontFamily } from "../../utils/cssConfig";
 
 const Wrapper = styled.div`
   margin: 0;
   padding: 0;
+
+  font-family: ${fontFamily};
 
   overflow: hidden;
   margin-bottom: 48px;
@@ -116,7 +119,7 @@ const Social = styled.div`
 export default function Profile({
   avatarSrc,
   username,
-  fullName,
+  fullname,
   followersData,
   children,
   ...props
@@ -127,7 +130,7 @@ export default function Profile({
       <Social>
         <Username>{username}</Username>
         <Followers followersData={followersData} />
-        <Fullname>Tomek Fiechowski</Fullname>
+        <Fullname>{fullname}</Fullname>
       </Social>
     </Wrapper>
   );

@@ -10,14 +10,18 @@ import App from "./components/App";
 import Grid from "./components/Grid";
 import Profile from "./components/Profile";
 import Photo from "./components/Photo";
-import GridControlBar  from "./components/Grid/GridControlBar";
-import GridControlBarItem  from "./components/Grid/GridControlBarItem";
+import GridControlBar from "./components/Grid/GridControlBar";
+import GridControlBarItem from "./components/Grid/GridControlBarItem";
 
-import examplePhotos from "./utils/examplePhotos";
+import examplePhotos, { angusYoung } from "./utils/examplePhotos";
 
 <App fluid>
-  <Profile avatarSrc={examplePhotos[0].src} username="Angus Young">
-  </Profile>
+  <Profile
+    avatarSrc={angusYoung.src}
+    username="angusyoung"
+    followersData={[10, 20, 30]}
+    fullname="Angus Young"
+  />
   <Grid>
     <GridControlBar>
       <GridControlBarItem>𐄹 Posts</GridControlBarItem>

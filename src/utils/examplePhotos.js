@@ -50,3 +50,8 @@ export default [
     id: "d8924a4c-1aed-4662-8f86-1b065c4ba51c"
   }
 ];
+
+export const angusYoung = {
+  src: "https://mediamass.net/jdd/public/documents/celebrities/1079.jpg",
+  id: "9dff6611-1aed-4662-11de-1b065c4ba51c"
+};
