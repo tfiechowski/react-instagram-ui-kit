@@ -33,6 +33,7 @@ function EmptyMessage() {
   );
 }
 
+/** @component */
 export default function Grid({ isEmpty, children, ...props }) {
   return (
     <Wrapper {...props}>
