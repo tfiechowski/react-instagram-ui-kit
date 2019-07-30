@@ -1,13 +1,16 @@
 module.exports = {
-  type: 'react-component',
+  type: "react-component",
   npm: {
     esModules: true,
     umd: {
-      global: 'InstagramUIKit',
+      global: "InstagramUIKit",
       externals: {
-        react: 'React',
-        'styled-components': 'styled'
+        react: "React",
+        "@emotion/styled": "styled"
       }
     }
+  },
+  babel: {
+    plugins: ["emotion"]
   }
-}
+};
