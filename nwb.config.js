@@ -5,7 +5,8 @@ module.exports = {
     umd: {
       global: 'InstagramUIKit',
       externals: {
-        react: 'React'
+        react: 'React',
+        'styled-components': 'styled'
       }
     }
   }
