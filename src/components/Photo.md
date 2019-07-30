@@ -8,6 +8,6 @@ import Grid from "./Grid";
 import examplePhotos from "../utils/examplePhotos";
 
 <Grid>
-  <Photo src={examplePhotos[0].src}> </Photo>
+  <Photo src={examplePhotos[0].src} />
 </Grid>;
 ```
