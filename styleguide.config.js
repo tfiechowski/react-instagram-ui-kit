@@ -10,6 +10,9 @@ module.exports = {
       ]
     }
   },
+  ignore: [
+      'src/components/**/index.js'
+  ],
   title: "React Instagram UI Kit",
   dangerouslyUpdateWebpackConfig(webpackConfig) {
     webpackConfig.output.filename = "build/bundle.js";
