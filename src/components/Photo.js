@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import styled from "@emotion/styled";
 
 export const Wrapper = styled.div`
@@ -25,6 +26,7 @@ export const Wrapper = styled.div`
   }
 `;
 
+/** @component */
 export function Photo({ src, children, ...props }) {
   return (
     <Wrapper {...props} ref={props.forwardedRef}>
@@ -32,6 +34,13 @@ export function Photo({ src, children, ...props }) {
       <div>{children}</div>
     </Wrapper>
   );
+}
+
+Photo.propTypes = {
+  /**
+   * Source of the image in base64 format
+   */
+  src: PropTypes.string.isRequired,
 }
 
 export default React.forwardRef((props, ref) => (
