@@ -7,3 +7,7 @@ It's not and is not intended to be Instagram clone, rather a set of basic buildi
 ## Docs & how to
 
 Check out the [documentation](https://tfiechowski.github.io/react-instagram-ui-kit/).
+
+## TODO
+
+ [ ] - Fix scroll mismatch for `App` + `Grid` components
