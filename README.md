@@ -1,16 +1,5 @@
-# react-instagram-ui-kit
+# React Instagram UI Kit
 
-[![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+#### Set of basic Instagram interface components.
 
-Describe react-instagram-ui-kit here.
-
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
-
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+It's not and is not intended to be Instagram clone, rather a set of basic building blocks for creating more complex applications that in one way or another need to preview Instagram interface.

@@ -1,6 +1,6 @@
 {
   "name": "react-instagram-ui-kit",
-  "version": "0.0.3",
+  "version": "0.1.0-beta",
   "description": "Basic Instagram components in React",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -11,26 +11,38 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-react-component",
-    "clean": "nwb clean-module && nwb clean-demo",
-    "prepublishOnly": "npm run build",
-    "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "start": "npx styleguidist server",
+    "release": "npm run build:dev && npm run build:prod",
+    "build:dev": "NODE_ENV=development rollup -c",
+    "build:prod": "NODE_ENV=production rollup -c",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "react": "16.x",
+    "react": "^16.x",
     "@emotion/core": "10.x",
     "@emotion/styled": "10.x"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
+    "babel-loader": "^8.0.6",
     "babel-plugin-emotion": "^10.0.14",
-    "nwb": "0.23.x",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-styleguidist": "^9.1.13",
+    "rollup": "^1.17.0",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-uglify": "^6.0.2",
+    "webpack": "^4.38.0"
   },
   "author": "Tomasz Fiechowski <tomasz.fiechowski@gmail.com>",
   "homepage": "https://github.com/tfiechowski/react-instagram-ui-kit",
