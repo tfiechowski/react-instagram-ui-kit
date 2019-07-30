@@ -1,7 +1,9 @@
 <br />
 <br />
 
-It's not and is not intended to be Instagram clone, rather a set of basic building blocks for creating more complex applications that in one way or another need to preview Instagram interface.
+
+
+It's not intended to be the Instagram clone, rather a set of basic building blocks for creating more complex applications that in one way or another need to preview Instagram interface.
 
 ### Full example:
 
