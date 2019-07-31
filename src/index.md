@@ -28,7 +28,7 @@ import examplePhotos, { angusYoung } from "utils/examplePhotos";
   />
   <Grid>
     <GridControlBar>
-      <GridControlBarItem>𐄹 Posts</GridControlBarItem>
+      <GridControlBarItem isActive>𐄹 Posts</GridControlBarItem>
       <GridControlBarItem>웃 Tagged</GridControlBarItem>
     </GridControlBar>
     {examplePhotos.map(photo => (
