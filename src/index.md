@@ -5,7 +5,7 @@ It's not intended to be the Instagram clone, rather a set of basic building bloc
 
 ### Full example:
 
-```js
+```jsx
 import App from "./components/App";
 import Grid from "./components/Grid";
 import Profile from "./components/Profile";

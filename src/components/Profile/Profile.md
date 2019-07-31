@@ -2,7 +2,7 @@
 
 Profile header
 
-```js
+```jsx
 import App from "../App";
 import Profile from "./Profile";
 

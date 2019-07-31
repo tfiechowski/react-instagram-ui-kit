@@ -2,7 +2,7 @@
 
 Because of the way `Photo` is styled, it always must be a child of a `Grid`
 
-```js
+```jsx
 import Grid from "./Grid";
 
 import examplePhotos from "../utils/examplePhotos";

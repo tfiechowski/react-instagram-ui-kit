@@ -4,7 +4,7 @@ Grid is a component holding the photos.
 
 Default grid view, images are displayed with rows of three.
 
-```js
+```jsx
 import Grid from "./Grid";
 import Photo from "../Photo";
 
@@ -21,7 +21,7 @@ import examplePhotos from "../../utils/examplePhotos";
 
 Images are displayed with a full available width.
 
-```js
+```jsx
 import Grid from "./Grid";
 import Photo from "../Photo";
 
