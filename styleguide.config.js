@@ -29,11 +29,16 @@ module.exports = {
       components: "src/components/**/*.js",
       exampleMode: "expand", // 'hide' | 'collapse' | 'expand'
       usageMode: "expand" // 'hide' | 'collapse' | 'expand'
+    },
+    {
+      name: "Source (GitHub)",
+      external: true,
+      href: "https://github.com/tfiechowski/react-instagram-ui-kit"
     }
   ],
   moduleAliases: {
     "react-instagram-ui-kit": path.resolve(__dirname, "src"),
-    "utils": path.resolve(__dirname, "src/utils")
+    utils: path.resolve(__dirname, "src/utils")
   },
-  styleguideDir: 'dist-gh-pages'
+  styleguideDir: "dist-gh-pages"
 };
