@@ -19,7 +19,7 @@ import examplePhotos, { angusYoung } from "./utils/examplePhotos";
   <Profile
     pictureSrc={angusYoung.src}
     username="angusyoung"
-    followersData={[31, 5, 55]}
+    followersData={[31, 3, 55]}
     fullname="Angus Young"
   />
   <Grid>

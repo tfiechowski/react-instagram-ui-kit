@@ -12,6 +12,6 @@ import { angusYoung } from "../../utils/examplePhotos";
   pictureSrc={angusYoung.src}
   username="angusyoung"
   fullname="Angus Young"
-  followersData={[31, 5, 55]}
+  followersData={[31, 3, 55]}
 />;
 ```

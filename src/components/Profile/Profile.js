@@ -161,7 +161,7 @@ Profile.propTypes = {
 
   /**
    * Array consisting of three elements: number of user posts, followers and amount of profiles user follows.
-   * [posts, followers, following], for example: [31, 5, 55]
+   * [posts, followers, following], for example: [31, 3, 55]
    */
   followersData: PropTypes.array
 };
