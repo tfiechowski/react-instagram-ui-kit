@@ -9,6 +9,9 @@ import Profile from "./Profile";
 import { angusYoung } from "../../utils/examplePhotos";
 
 <Profile
+  bio={`
+    Lead guitarist of AC⚡DC
+  `}
   pictureSrc={angusYoung.src}
   username="angusyoung"
   fullname="Angus Young"

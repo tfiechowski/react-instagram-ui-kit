@@ -17,6 +17,9 @@ import examplePhotos, { angusYoung } from "./utils/examplePhotos";
 
 <App fluid>
   <Profile
+    bio={`
+      Lead guitarist of AC⚡DC
+    `}
     pictureSrc={angusYoung.src}
     username="angusyoung"
     followersData={[31, 3, 55]}

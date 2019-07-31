@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { safeHtml } from "common-tags";
 import PropTypes from "prop-types";
 import React from "react";
 import { fontFamily } from "../../utils/cssConfig";
@@ -11,6 +12,7 @@ const Wrapper = styled.div`
 
   overflow: hidden;
   margin-bottom: 48px;
+  margin-top: 24px;
 
   display: flex;
 
@@ -55,7 +57,7 @@ const FollowersWrapper = styled.div`
   flex: 2;
 
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   font-size: 16px;
   font-weight: 400;
@@ -117,13 +119,31 @@ function Username({ children }) {
 const Fullname = styled.div`
   font-weight: 600;
   font-size: 16px;
+
+  margin-bottom: 4px;
 `;
 
 const Social = styled.div`
   flex: 2;
 `;
 
+const BioWrapper = styled.div`
+  font-size: 16px;
+  font-weight: 400;
+`;
+
+function Bio({ text }) {
+  const __html = text
+    .trim()
+    .split("\n")
+    .map(line => safeHtml`<span>${line}</span>`)
+    .join("<br />");
+
+  return <BioWrapper dangerouslySetInnerHTML={{ __html }} />;
+}
+
 export default function Profile({
+  bio,
   pictureSrc,
   username,
   fullname,
@@ -137,13 +157,21 @@ export default function Profile({
       <Social>
         <Username>{username}</Username>
         <Followers followersData={followersData} />
-        <Fullname>{fullname}</Fullname>
+        <div>
+          <Fullname>{fullname}</Fullname>
+          {bio && <Bio text={bio} />}
+        </div>
       </Social>
     </Wrapper>
   );
 }
 
 Profile.propTypes = {
+  /**
+   * User's bio.
+   */
+  bio: PropTypes.string,
+
   /**
    * Source of the profile picture,
    */
