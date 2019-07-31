@@ -2,13 +2,14 @@ import styled from "@emotion/styled";
 import { safeHtml } from "common-tags";
 import PropTypes from "prop-types";
 import React from "react";
-import { fontFamily } from "../../utils/cssConfig";
+import { fontFamily, textColor } from "../../utils/cssConfig";
 
 const Wrapper = styled.div`
   margin: 0;
   padding: 0;
 
   font-family: ${fontFamily};
+  color: ${textColor};
 
   overflow: hidden;
   margin-bottom: 48px;
@@ -84,13 +85,13 @@ function Followers({ followersData }) {
     <FollowersWrapper>
       <ul>
         <li>
-          Posty: <Number>{posts}</Number>
+          <Number>{posts}</Number> posts
         </li>
         <li>
           <Number>{followers}</Number> followers
         </li>
         <li>
-          Following: <Number>{following}</Number>
+          <Number>{following}</Number> following
         </li>
       </ul>
     </FollowersWrapper>

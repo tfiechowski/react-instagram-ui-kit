@@ -13,6 +13,7 @@ const GridControlBarItemWrapper = styled.div`
   border-top: 1px solid ${props => (props.isActive ? "#262626" : "#efefef")};
 
   font-family: ${fontFamily};
+  font-weight: 600;
 
   & > div {
     text-transform: uppercase;
