@@ -8,7 +8,7 @@ import { uglify } from "rollup-plugin-uglify";
 
 const NODE_ENV = process.env.NODE_ENV || "development";
 
-const isProd = () => NODE_ENV === "production";
+const isProd = NODE_ENV === "production";
 
 const plugins = [
   replace({
@@ -24,12 +24,12 @@ const plugins = [
 
 const prodPlugins = [];
 
-if (isProd()) {
+if (isProd) {
   plugins.push(...prodPlugins);
 }
 
-const outputFileExtension = isProd() ? "js" : "min.js";
-const sourcemap = !isProd();
+const outputFileExtension = isProd ? "min.js" : ".js";
+const sourcemap = !isProd;
 
 export default [
   {
@@ -39,7 +39,7 @@ export default [
       format: "cjs",
       sourcemap
     },
-    plugins: [...plugins, ...(isProd() ? [uglify()] : [])]
+    plugins: [...plugins, ...(isProd ? [uglify()] : [])]
   },
   {
     input: "./src/index.js",
@@ -48,6 +48,6 @@ export default [
       format: "esm",
       sourcemap
     },
-    plugins: [...plugins, ...(isProd() ? [terser()] : [])]
+    plugins: [...plugins, ...(isProd ? [terser()] : [])]
   }
 ];

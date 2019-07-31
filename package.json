@@ -20,9 +20,10 @@
     "test": "jest"
   },
   "peerDependencies": {
-    "react": "^16.x",
     "@emotion/core": "10.x",
-    "@emotion/styled": "10.x"
+    "@emotion/styled": "10.x",
+    "react": "^16.x",
+    "react-dom": "^16.x"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
