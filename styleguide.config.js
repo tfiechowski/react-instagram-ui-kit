@@ -22,7 +22,7 @@ module.exports = {
   sections: [
     {
       name: "Introduction",
-      content: "src/index.md"
+      content: "docs/index.md"
     },
     {
       name: "Components",
