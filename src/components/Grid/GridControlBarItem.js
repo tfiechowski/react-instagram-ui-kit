@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
-import { fontFamily } from "../../utils/cssConfig";
+import { fontFamily } from "utils/cssConfig";
 
 const GridControlBarItemWrapper = styled.div`
   margin: 0;

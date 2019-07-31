@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { fontFamily } from "../../utils/cssConfig";
+import { fontFamily } from "utils/cssConfig";
 
 const GridControlBarWrapper = styled.div`
   font-family: ${fontFamily};

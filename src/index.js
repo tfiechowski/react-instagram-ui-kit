@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import Grid from "./components/Grid/Grid";
-import App from "./components/App";
-import Photo from "./components/Photo";
+import Grid from "components/Grid";
+import App from "components/App";
+import Photo from "components/Photo";
 
 export { Grid, App, Photo };
 

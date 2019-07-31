@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
-import { fontFamily, textColor } from "../utils/cssConfig";
+import { fontFamily, textColor } from "utils/cssConfig";
 
 const App = styled.div`
   overflow-y: scroll;

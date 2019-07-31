@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import { safeHtml } from "common-tags";
 import PropTypes from "prop-types";
 import React from "react";
-import { fontFamily, textColor } from "../../utils/cssConfig";
-import { roundFollowers } from "../../utils/numbers";
+import { fontFamily, textColor } from "utils/cssConfig";
+import { roundFollowers } from "utils/numbers";
 
 const Wrapper = styled.div`
   margin: 0;

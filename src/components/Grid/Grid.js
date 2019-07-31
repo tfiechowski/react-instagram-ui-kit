@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
-import { Wrapper as PhotoWrapper } from "../Photo";
+import { Wrapper as PhotoWrapper } from "components/Photo";
 
 const Wrapper = styled.div`
   margin: 0;
