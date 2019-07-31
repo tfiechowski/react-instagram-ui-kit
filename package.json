@@ -16,7 +16,8 @@
     "release": "npm run build:dev && npm run build:prod",
     "build:dev": "NODE_ENV=development rollup -c",
     "build:prod": "NODE_ENV=production rollup -c",
-    "prepublishOnly": "npm run release"
+    "prepublishOnly": "npm run release",
+    "test": "jest"
   },
   "peerDependencies": {
     "react": "^16.x",
@@ -32,6 +33,8 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-emotion": "^10.0.14",
     "common-tags": "^1.8.0",
+    "jest": "^24.8.0",
+    "jest-each": "^24.8.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-styleguidist": "^9.1.13",
