@@ -34,5 +34,6 @@ module.exports = {
   moduleAliases: {
     "react-instagram-ui-kit": path.resolve(__dirname, "src"),
     "utils": path.resolve(__dirname, "src/utils")
-  }
+  },
+  styleguideDir: 'dist-gh-pages'
 };
