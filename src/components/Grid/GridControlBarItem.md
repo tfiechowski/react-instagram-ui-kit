@@ -3,7 +3,7 @@ See GridControlBar
 ### Example
 
 ```jsx
-import GridControlBarItem from "./GridControlBarItem";
+import { GridControlBarItem } from "react-instagram-ui-kit";
 
 <GridControlBarItem>𐄹 Posts</GridControlBarItem>;
 ```
@@ -11,7 +11,7 @@ import GridControlBarItem from "./GridControlBarItem";
 ### Click handler and active state
 
 ```jsx
-import GridControlBarItem from "./GridControlBarItem";
+import { GridControlBarItem } from "react-instagram-ui-kit";
 
 const handleClick = () => alert("hello!");
 

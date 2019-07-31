@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   webpackConfig: {
     module: {
@@ -10,9 +12,7 @@ module.exports = {
       ]
     }
   },
-  ignore: [
-      'src/components/**/index.js'
-  ],
+  ignore: ["src/components/**/index.js"],
   title: "React Instagram UI Kit",
   dangerouslyUpdateWebpackConfig(webpackConfig) {
     webpackConfig.output.filename = "build/bundle.js";
@@ -30,5 +30,9 @@ module.exports = {
       exampleMode: "expand", // 'hide' | 'collapse' | 'expand'
       usageMode: "expand" // 'hide' | 'collapse' | 'expand'
     }
-  ]
+  ],
+  moduleAliases: {
+    "react-instagram-ui-kit": path.resolve(__dirname, "src"),
+    "utils": path.resolve(__dirname, "src/utils")
+  }
 };

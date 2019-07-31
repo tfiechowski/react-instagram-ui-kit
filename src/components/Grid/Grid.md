@@ -5,10 +5,8 @@ Grid is a component holding the photos.
 Default grid view, images are displayed with rows of three.
 
 ```jsx
-import Grid from "./Grid";
-import Photo from "../Photo";
-
-import examplePhotos from "../../utils/examplePhotos";
+import {Grid, Photo} from "react-instagram-ui-kit";
+import examplePhotos from "utils/examplePhotos";
 
 <Grid>
   {examplePhotos.map(photo => (

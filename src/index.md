@@ -6,14 +6,15 @@ It's not intended to be the Instagram clone, rather a set of basic building bloc
 ### Full example:
 
 ```jsx
-import App from "./components/App";
-import Grid from "./components/Grid";
-import Profile from "./components/Profile";
-import Photo from "./components/Photo";
-import GridControlBar from "./components/Grid/GridControlBar";
-import GridControlBarItem from "./components/Grid/GridControlBarItem";
-
-import examplePhotos, { angusYoung } from "./utils/examplePhotos";
+import {
+  App,
+  Grid,
+  Profile,
+  Photo,
+  GridControlBar,
+  GridControlBarItem
+} from "react-instagram-ui-kit";
+import examplePhotos, { angusYoung } from "utils/examplePhotos";
 
 <App fluid>
   <Profile

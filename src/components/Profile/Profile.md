@@ -3,10 +3,8 @@
 Profile header
 
 ```jsx
-import App from "../App";
-import Profile from "./Profile";
-
-import { angusYoung } from "../../utils/examplePhotos";
+import { App, Profile } from "react-instagram-ui-kit";
+import { angusYoung } from "utils/examplePhotos";
 
 <Profile
   bio={`
