@@ -49,12 +49,12 @@ export default function Grid({ isEmpty, children, ...props }) {
 
 Grid.propTypes = {
   /**
-   * Specifies if the grid is empty
+   * Use to show a hint that the list is empty.
    */
   isEmpty: PropTypes.bool,
 
   /**
-   * When `true`, images are displayed with 100% width
+   * Use `feed` to display images with full width, spanning entire Grid's width.
    */
   feed: PropTypes.bool
 };
