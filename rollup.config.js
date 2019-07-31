@@ -28,7 +28,7 @@ if (isProd) {
   plugins.push(...prodPlugins);
 }
 
-const outputFileExtension = isProd ? "min.js" : ".js";
+const outputFileExtension = isProd ? "min.js" : "js";
 const sourcemap = !isProd;
 
 export default [
