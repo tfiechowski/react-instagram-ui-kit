@@ -9,8 +9,9 @@ import Profile from "./Profile";
 import { angusYoung } from "../../utils/examplePhotos";
 
 <Profile
-  avatarSrc={angusYoung.src}
+  pictureSrc={angusYoung.src}
   username="angusyoung"
   fullname="Angus Young"
+  followersData={[31, 5, 55]}
 />;
 ```

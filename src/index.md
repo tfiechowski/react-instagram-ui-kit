@@ -1,8 +1,6 @@
 <br />
 <br />
 
-
-
 It's not intended to be the Instagram clone, rather a set of basic building blocks for creating more complex applications that in one way or another need to preview Instagram interface.
 
 ### Full example:
@@ -19,9 +17,9 @@ import examplePhotos, { angusYoung } from "./utils/examplePhotos";
 
 <App fluid>
   <Profile
-    avatarSrc={angusYoung.src}
+    pictureSrc={angusYoung.src}
     username="angusyoung"
-    followersData={[10, 20, 30]}
+    followersData={[31, 5, 55]}
     fullname="Angus Young"
   />
   <Grid>

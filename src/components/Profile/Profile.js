@@ -13,6 +13,13 @@ const Wrapper = styled.div`
   margin-bottom: 48px;
 
   display: flex;
+
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 const AvatarWrapper = styled.div`
@@ -117,7 +124,7 @@ const Social = styled.div`
 `;
 
 export default function Profile({
-  avatarSrc,
+  pictureSrc,
   username,
   fullname,
   followersData,
@@ -125,8 +132,8 @@ export default function Profile({
   ...props
 }) {
   return (
-    <Wrapper {...props} avatarSrc>
-      <Avatar src={avatarSrc} />
+    <Wrapper {...props}>
+      <Avatar src={pictureSrc} />
       <Social>
         <Username>{username}</Username>
         <Followers followersData={followersData} />
@@ -138,14 +145,25 @@ export default function Profile({
 
 Profile.propTypes = {
   /**
-   * Specifies if the grid is empty
+   * Source of the profile picture,
    */
-  isEmpty: PropTypes.bool,
+  pictureSrc: PropTypes.string,
 
   /**
-   * When `true`, images are displayed with 100% width
+   * Full name of the user.
    */
-  feed: PropTypes.bool
+  fullname: PropTypes.string,
+
+  /**
+   * Username of the user.
+   */
+  username: PropTypes.string.isRequired,
+
+  /**
+   * Array consisting of three elements: number of user posts, followers and amount of profiles user follows.
+   * [posts, followers, following], for example: [31, 5, 55]
+   */
+  followersData: PropTypes.array
 };
 
 Profile.defaultProps = {
