@@ -3,6 +3,7 @@ import { safeHtml } from "common-tags";
 import PropTypes from "prop-types";
 import React from "react";
 import { fontFamily, textColor } from "../../utils/cssConfig";
+import { roundFollowers } from "../../utils/numbers";
 
 const Wrapper = styled.div`
   margin: 0;
@@ -81,6 +82,8 @@ const Number = styled.span`
 function Followers({ followersData }) {
   const [posts, followers, following] = followersData;
 
+  const roundedFollowers = roundFollowers(followers);
+
   return (
     <FollowersWrapper>
       <ul>
@@ -88,7 +91,7 @@ function Followers({ followersData }) {
           <Number>{posts}</Number> posts
         </li>
         <li>
-          <Number>{followers}</Number> followers
+          <Number>{roundedFollowers}</Number> followers
         </li>
         <li>
           <Number>{following}</Number> following
@@ -190,7 +193,7 @@ Profile.propTypes = {
 
   /**
    * Array consisting of three elements: number of user posts, followers and amount of profiles user follows.
-   * [posts, followers, following], for example: [31, 3, 55]
+   * [posts, followers, following], for example: [31, 3000000, 55]
    */
   followersData: PropTypes.array
 };

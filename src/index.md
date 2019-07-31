@@ -22,7 +22,7 @@ import examplePhotos, { angusYoung } from "./utils/examplePhotos";
     `}
     pictureSrc={angusYoung.src}
     username="angusyoung"
-    followersData={[31, 3, 55]}
+    followersData={[31, 3000000, 55]}
     fullname="Angus Young"
   />
   <Grid>
