@@ -11,3 +11,5 @@ Check out the [documentation](https://tfiechowski.github.io/react-instagram-ui-k
 ## TODO
 
  [ ] - Fix scroll mismatch for `App` + `Grid` components
+ [ ] - Test exports from `src/index.js`
+
