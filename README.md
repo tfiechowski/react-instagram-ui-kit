@@ -13,7 +13,9 @@ It's not and is not intended to be Instagram clone, rather a set of basic buildi
 
 This is how the example looks like:
 
-![Preview](docs/full_example.png "Preview")
+<p align="center">
+  <img src="docs/full_example.png">
+</p>
 
 For details and more examples check out the [documentation](https://tfiechowski.github.io/react-instagram-ui-kit/).
 
