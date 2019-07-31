@@ -14,7 +14,7 @@ It's not and is not intended to be Instagram clone, rather a set of basic buildi
 This is how the example looks like:
 
 <p align="center">
-  <img src="docs/full_example.png">
+  <img src="docs/full_example.jpg" style="max-width: 640px;">
 </p>
 
 For details and more examples check out the [documentation](https://tfiechowski.github.io/react-instagram-ui-kit/).
