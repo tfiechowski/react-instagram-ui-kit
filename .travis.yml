@@ -8,6 +8,10 @@ cache:
 before_deploy:
   - "npm run docs:build"
 
+install: npm ci
+
+script: npm run test
+
 deploy:
   provider: pages
   skip_cleanup: true
