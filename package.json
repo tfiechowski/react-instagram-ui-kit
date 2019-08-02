@@ -1,6 +1,6 @@
 {
   "name": "react-instagram-ui-kit",
-  "version": "0.2.2-beta",
+  "version": "0.2.3-beta",
   "description": "Basic Instagram components in React",
   "main": "lib/index.js",
   "browser": "lib/index.umd.js",
