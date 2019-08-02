@@ -1,6 +1,6 @@
 {
   "name": "react-instagram-ui-kit",
-  "version": "0.2.3-beta",
+  "version": "0.2.5-beta",
   "description": "Basic Instagram components in React",
   "main": "lib/index.js",
   "browser": "lib/index.umd.js",
@@ -12,7 +12,7 @@
     "start": "styleguidist server",
     "docs:build": "styleguidist build",
     "build": "NODE_ENV=production rollup -c",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "rm -rf lib && npm run build",
     "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
     "test": "jest"
   },
