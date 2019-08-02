@@ -6,7 +6,7 @@
   "browser": "lib/index.umd.js",
   "module": "lib/index.es.js",
   "files": [
-    "lib"
+    "/lib"
   ],
   "scripts": {
     "start": "styleguidist server",
