@@ -3,20 +3,18 @@
   "version": "0.2.2-beta",
   "description": "Basic Instagram components in React",
   "main": "lib/index.js",
-  "module": "es/index.js",
+  "browser": "lib/index.umd.js",
+  "module": "lib/index.es.js",
   "files": [
-    "css",
-    "es",
-    "lib",
-    "umd"
+    "lib"
   ],
   "scripts": {
     "start": "styleguidist server",
     "docs:build": "styleguidist build",
     "release": "npm run build:dev && npm run build:prod",
-    "build:dev": "NODE_ENV=development rollup -c",
-    "build:prod": "NODE_ENV=production rollup -c",
+    "build": "NODE_ENV=production rollup -c",
     "prepublishOnly": "npm run release",
+    "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
     "test": "jest"
   },
   "peerDependencies": {
