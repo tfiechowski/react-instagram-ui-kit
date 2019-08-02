@@ -7,47 +7,128 @@ import { terser } from "rollup-plugin-terser";
 import { uglify } from "rollup-plugin-uglify";
 
 const NODE_ENV = process.env.NODE_ENV || "development";
+import packageJSON from "./package.json";
+const input = "./src/index.js";
+const minifyExtension = pathToFile => pathToFile.replace(/\.js$/, ".min.js");
 
-const isProd = NODE_ENV === "production";
-
-const plugins = [
-  replace({
-    "process.env.NODE_ENV": JSON.stringify(NODE_ENV)
-  }),
-  babel({
-    exclude: "node_modules/**"
-  }),
-  external(),
-  resolve(),
-  commonjs()
-];
-
-const prodPlugins = [];
-
-if (isProd) {
-  plugins.push(...prodPlugins);
-}
-
-const outputFileExtension = isProd ? "min.js" : "js";
-const sourcemap = !isProd;
+const replacePlugin = replace({
+  "process.env.NODE_ENV": JSON.stringify(NODE_ENV)
+});
 
 export default [
+  // CommonJS
   {
-    input: "./src/index.js",
+    input,
     output: {
-      file: `lib/index.${outputFileExtension}`,
+      file: packageJSON.main,
       format: "cjs",
-      sourcemap
+      exports: "named"
     },
-    plugins: [...plugins, ...(isProd ? [uglify()] : [])]
+    plugins: [
+      babel({
+        exclude: "node_modules/**"
+      }),
+      external(),
+      resolve(),
+      commonjs()
+    ]
   },
   {
-    input: "./src/index.js",
+    input,
     output: {
-      file: `lib/index.esm.${outputFileExtension}`,
-      format: "esm",
-      sourcemap
+      file: minifyExtension(packageJSON.main),
+      format: "cjs",
+      exports: "named"
     },
-    plugins: [...plugins, ...(isProd ? [terser()] : [])]
+    plugins: [
+      replacePlugin,
+      babel({
+        exclude: "node_modules/**"
+      }),
+      external(),
+      resolve(),
+      commonjs(),
+      uglify()
+    ]
+  },
+  // UMD
+  {
+    input,
+    output: {
+      file: packageJSON.browser,
+      format: "umd",
+      exports: "named",
+      name: "App",
+      globals: {
+        react: "React",
+        "@emotion/core": "core"
+      }
+    },
+    plugins: [
+      babel({
+        exclude: "node_modules/**"
+      }),
+      external(),
+      resolve(),
+      commonjs()
+    ]
+  },
+  {
+    input,
+    output: {
+      file: minifyExtension(packageJSON.browser),
+      format: "umd",
+      exports: "named",
+      name: "App",
+      globals: {
+        react: "React",
+        "@emotion/core": "core"
+      }
+    },
+    plugins: [
+      replacePlugin,
+      babel({
+        exclude: "node_modules/**"
+      }),
+      external(),
+      resolve(),
+      commonjs(),
+      terser()
+    ]
+  },
+  // ES
+  {
+    input,
+    output: {
+      file: packageJSON.module,
+      format: "es",
+      exports: "named"
+    },
+    plugins: [
+      babel({
+        exclude: "node_modules/**"
+      }),
+      external(),
+      resolve(),
+      commonjs()
+    ]
+  },
+  {
+    input,
+    output: {
+      file: minifyExtension(packageJSON.module),
+      format: "es",
+      exports: "named"
+    },
+    plugins: [
+      replacePlugin,
+      babel({
+        exclude: "node_modules/**"
+      }),
+      external(),
+      resolve(),
+      commonjs(),
+      terser()
+    ]
   }
 ];
