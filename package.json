@@ -11,9 +11,8 @@
   "scripts": {
     "start": "styleguidist server",
     "docs:build": "styleguidist build",
-    "release": "npm run build:dev && npm run build:prod",
     "build": "NODE_ENV=production rollup -c",
-    "prepublishOnly": "npm run release",
+    "prepublishOnly": "npm run build",
     "postbuild": "npm pack && tar -xvzf *.tgz && rm -rf package *.tgz",
     "test": "jest"
   },
