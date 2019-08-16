@@ -8,9 +8,9 @@ cache:
 before_deploy:
   - "npm run docs:build"
 
-install: npm ci
+install: yarn
 
-script: npm run test
+script: yarn test
 
 deploy:
   provider: pages
