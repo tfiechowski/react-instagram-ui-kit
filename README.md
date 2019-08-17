@@ -22,4 +22,5 @@ For details and more examples check out the [documentation](https://tfiechowski.
 ## TODO
 
 - [ ] Fix scroll mismatch for `App` + `Grid` components
+- [ ] Add `video` flag to grid post
 - [x] Test exports from `src/index.js`
